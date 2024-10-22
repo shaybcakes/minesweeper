@@ -1,0 +1,373 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx2s7xihviwv4"]
+
+[ext_resource type="PackedScene" uid="uid://tpt58i1m1q5k" path="res://Scenes/tile.tscn" id="1_7pj3w"]
+[ext_resource type="Theme" uid="uid://b1o3f708yjdpu" path="res://theme.tres" id="1_s2wcm"]
+[ext_resource type="Script" path="res://Scenes/play_grid.gd" id="1_umyvo"]
+
+[node name="PlayGrid" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(660, 660)
+offset_right = 660.0
+offset_bottom = 660.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+theme = ExtResource("1_s2wcm")
+script = ExtResource("1_umyvo")
+
+[node name="grid" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="0" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="0" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/0" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/1" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/2" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/3" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/4" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/5" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/6" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/7" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/8" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" type="HBoxContainer" parent="grid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="0" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="1" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="2" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="3" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="4" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="5" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="6" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="7" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="8" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="9" parent="grid/9" instance=ExtResource("1_7pj3w")]
+layout_mode = 2
+
+[node name="dummy" parent="." instance=ExtResource("1_7pj3w")]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 23
+theme_override_font_sizes/font_size = 70
+text = "Loading...."
+horizontal_alignment = 1

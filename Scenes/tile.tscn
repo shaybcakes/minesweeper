@@ -1,0 +1,126 @@
+[gd_scene load_steps=9 format=3 uid="uid://tpt58i1m1q5k"]
+
+[ext_resource type="Script" path="res://Scripts/tile.gd" id="1_1nhav"]
+[ext_resource type="Texture2D" uid="uid://cnawphkt01x4m" path="res://Assets/cardback.png" id="1_gwlwr"]
+[ext_resource type="Texture2D" uid="uid://cbi42t6om8n5i" path="res://Assets/cardfaces.png" id="2_puirc"]
+
+[sub_resource type="Animation" id="Animation_8mykr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tileback:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tileback/tileface:show_behind_parent")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8dhsr"]
+resource_name = "card_flip"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tileback:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 1), Vector2(0.001, 1), Vector2(0.5, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tileback/tileface:show_behind_parent")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, false]
+}
+
+[sub_resource type="Animation" id="Animation_s0u4f"]
+resource_name = "unflip"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tileback:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 1), Vector2(0.001, 1), Vector2(0.5, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tileback/tileface:show_behind_parent")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4r60"]
+_data = {
+"RESET": SubResource("Animation_8mykr"),
+"card_flip": SubResource("Animation_8dhsr"),
+"unflip": SubResource("Animation_s0u4f")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2px6"]
+size = Vector2(58, 58)
+
+[node name="1" type="PanelContainer"]
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_1nhav")
+metadata/cardvalue = 0
+
+[node name="tileback" type="Sprite2D" parent="."]
+texture = ExtResource("1_gwlwr")
+hframes = 2
+
+[node name="tileface" type="Sprite2D" parent="tileback"]
+show_behind_parent = true
+texture = ExtResource("2_puirc")
+hframes = 11
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f4r60")
+}
+speed_scale = 2.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_l2px6")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
